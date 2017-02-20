@@ -1,0 +1,343 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<!-- <link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html"> -->
+
+<!-- <link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+
+<link rel="import" href="../../bower_components/iron-collapse/iron-collapse.html">-->
+
+<!-- <link rel="import" href="../../bower_components/sc-footer/sc-footer.html">  -->
+
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/sc-style/sc-style.html">
+<link rel="import" href="../../bower_components/sc-iconset/sc-iconset.html">
+
+<dom-module id="faq-app">
+<link rel="import" href="../../bower_components/sc-style/sc-style.css" type="css">
+
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      .faqitem {
+        padding: 6vh 10vw; 
+        border-bottom: 2px dotted rgba(0,0,0,0.075);
+
+      }
+
+      .faqitem h2 {
+        font-size: 18px;
+        line-height: 24px;
+      }
+        .faqitem p {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      .dotline {
+        width: 100%;
+        height: 2px;
+        border-bottom: 2px dotted rgba(0,0,0,0.075);
+      }
+      .temppadding {
+      padding-top: 15vh;
+      padding-left: 12vw;
+      padding-right: 12vw;
+      padding-bottom: 15vh;
+    }
+
+
+
+
+
+.linkblok_one {
+    @apply(--layout-vertical);
+    @apply(--layout-start-justified);     
+    @apply(--layout-start);    
+    @apply(--layout-flex);
+    min-width:  300px;      
+  }
+
+  .linkblok_two {
+    @apply(--layout-vertical);
+    @apply(--layout-start-justified);     
+    @apply(--layout-end); 
+    min-width:  300px;  
+    max-width:  500px; 
+    margin-top: 0px; 
+  }
+
+
+    a {
+      font-family: montserratlight;
+      -webkit-font-smoothing: antialiased;
+      font-weight: 100;  
+
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 14px;
+      -webkit-margin-before:4px;
+      -webkit-margin-after:4px;
+      -webkit-margin-start:0em;
+      -webkit-margin-end:0em;
+      margin:4px 0px 4px 0px;
+
+      color: var(--sc-yellow);
+      text-decoration: none;
+      outline: none;
+      border-bottom: 1px dotted var(--sc-yellow);
+    }
+
+    a:visited {
+      color: var(--sc-yellow);
+      text-decoration: none;
+      outline: none;
+      border-bottom: 1px dotted var(--sc-yellow);
+    }
+
+
+
+    .linkblok_two a {
+      color: var(--sc-grey2);
+      border-bottom: 1px dotted var(--sc-grey2);   
+ 
+    }
+    .linkblok_two a:visited {
+      color: var(--sc-grey2);
+      border-bottom: 1px dotted var(--sc-grey2);      
+      }
+
+
+    .linkblocks {
+    padding-top: 10vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-bottom: 8vh;
+
+    }
+
+
+    .logoicon {
+      margin-right: 10px;
+    }
+
+
+
+    .logobtn {
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 2px dotted rgba(255,255,255,0.05);
+    }
+
+    .logobtn paper-button{
+      background-color: rgba(255,255,255,0.025);
+    }
+
+    .otherlinkstxt {
+      opacity: 0.5;
+    }
+
+
+    .topblock {
+      padding-bottom: 16vh;
+      padding-top: 8vh;
+    }
+    sc-footer {
+      border: 1px solid red;
+    }
+
+.backlink {
+  padding: 13px 18px 13px 18px;
+}
+@media all and (min-width: 0) and (max-width: 500px) {
+
+    .teammember {
+        width: 300px;
+        margin: 10px 0px 10px 0px;
+        border-bottom: 2px dotted var(--sc-grey2);
+/*        background-color: rgba(255,255,255,0.25); */
+        box-sizing:border-box;
+        padding: 30px 30px 50px 30px;
+      }
+
+
+    .linkblok_one {
+      @apply(--layout-vertical);
+      @apply(--layout-start-justified);     
+      @apply(--layout-start);   
+     -ms-flex: none;
+      -webkit-flex: none;
+      flex: none;
+    }
+
+    .linkblok_two {
+      @apply(--layout-vertical);
+      @apply(--layout-start-justified);     
+      @apply(--layout-start);    
+      margin-top: 30px; 
+    }
+
+    .linkblocks {
+    padding-top: 8vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-bottom: 8vh;
+
+    }
+
+    .logobtn {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: none;
+    }
+
+
+    .topblock {
+      padding-bottom: 12vh;
+      padding-top: 4vh;
+    }
+    }
+
+    </style>
+
+
+    <div class="totalwidth vertic centercenter whiteback">
+<div class="totalwidth horizont center endjust backlink grey1back"> 
+    <paper-icon-button icon="sc-icons:logonew" class="grey3 grey1back shadow medium">Swarmcity-logo</paper-icon-button>
+  </div>
+
+    <div class="totalwidth vertic centercenter basestructure">
+
+    <div class="totalwidth vertic centercenter paddingallround topblock grey1back">
+
+
+      <h1 class="centertxt ultralight green">Swarm City FAQ</h1>
+      <div class="fivespace"></div>
+      <p class="centertxt maxwidth">Here you'll find the most common questions about Swarm City. If you have any others not covered here, please feel free to reach out on Slack. We’re happy to answer all questions!</p>
+    </div>
+
+
+        <div class="totalwidth faqitem whiteback">
+          <h2 class="semibold grey4">What is a Swarm City Token (SWT)?</h2>
+          <div class="minispace"></div>
+          <p>The SWT is a utility to pay for transactions in the Swarm City ecosystem.</p>
+        </div>
+
+        <div class="totalwidth faqitem whiteback">
+          <h2 class="semibold grey4">I missed the token sale, how can I buy tokens now?</h2>
+          <div class="minispace"></div>
+          <p>The SWT will be listed on exchanges, where anyone can offer or buy tokens. In the more distant future, users can easily buy tokens from USD, EUR and other fiat currencies on our in-app exchange.</p>
+        </div>
+
+        <div class="totalwidth faqitem whiteback">
+          <h2 class="semibold grey4">Token exchange: How do I exchange my ARC to SWT?</h2>
+          <div class="minispace"></div>
+          <p>The first release of Swarm City is called Terminal. There is a tool in Terminal that will allow you to exchange your ARC to SWT.</p>
+        </div>
+
+        <div class="totalwidth faqitem whiteback">
+          <h2 class="semibold grey4">Token exchange: What is the exchange rate ARC to SWT?</h2>
+          <div class="minispace"></div>
+          <p>It is 1:1.</p>
+        </div>
+
+        <!-- <div class="totalwidth faqitem whiteback">
+          <h2 class="semibold grey4">What is the difference between a vault and a wallet?</h2>
+          <div class="minispace"></div>
+          <p>A wallet has a private and public key that holds your tokenbalance. For example the tokensale-wallet or Myetherwallet.
+          The vault contains a wallet (the ARC wallet you uploaded, or the private key you pasted or a brand new one if you didn't have tokens from the tokensale) and also your personal data: a username, avatar, preferences,... The vault gets encrypted with your password.</p>
+        </div>
+ -->
+
+
+        <div class="totalwidth faqitem whiteback">
+          <h2 class="semibold grey4">Token-exchange: Can I send ARC directly from myether wallet to the SWT contract?</h2>
+          <div class="minispace"></div>
+          <p>No, to exchange from ARC to SWT you will have paste your private key from myether wallet to Terminal and use the exchange tool in Terminal. Once complete, you will be able to view your SWT on your myetherwallet account as well as in the Terminal.</p>
+        </div>
+
+        <div class="totalwidth faqitem whiteback">
+          <h2 class="semibold grey4">Token exchange: How long will I be able to exchange ARC for SWT? Is there an end date?</h2>
+          <div class="minispace"></div>
+          <p>You will be able to exchange ARC to SWT forever. There is no end date.</p>
+        </div>
+
+        <div class="totalwidth faqitem whiteback">
+          <h2 class="semibold grey4">Token exchange: Will there be a Swarm City ICO?</h2>
+          <div class="minispace"></div>
+          <p>No, there will not be a Swarm City ICO. The amount of SWT created through the token exchange will be the maximum ever created.</p>
+        </div>
+
+ 
+
+
+      </div>
+    </div>
+
+    <!-- <sc-footer></sc-footer> -->
+        <div class="totalwidth vertic startjust start grey4back linkblocks">
+
+        <div class="totalwidth logobtn grey4back">
+          <paper-button class="grey4back shadow yellow">
+            <iron-icon icon="sc-icons:logonew" class="yellow medium logoicon">Swarmcity-logo</iron-icon>
+            visit swarm.city
+          </paper-button>
+        </div>
+
+
+        <div class="totalwidth horizont wrap centerjust start grey4back">
+          <div class="linkblok_one">
+            <!-- <div class="toswarmcityapp">
+              <iron-icon icon="sc-icons:logonew" class="big grey2 logoicon">Swarmcity-logo</iron-icon>
+            </div> -->
+            <p class="bold otherlinkstxt yellow small">Other Swarm City links</p>
+            <div class="minispace"></div>
+
+<!--             <a target="_blank" href="http://thisis.swarm.city">What is Swarm City?</a> -->
+
+
+            <a target="_blank" href="http://getactivein.swarm.city">Get active in Swarm City</a>
+            <!-- <a target="_blank" href="http://swt.swarm.city">About the Swarm City Token</a> -->
+            <a target="_blank" href="http://advisors.swarm.city">Swarm City Advisors</a>
+            <!-- <a target="_blank" href="http://dev.swarm.city">Development</a>
+            <a target="_blank" href="http://releaseroadmap.swarm.city">Release Roadmap</a> -->
+
+            <!-- <a target="_blank" href="http://faq.swarm.city">FAQ</a> -->
+          </div>
+          <div class="linkblok_two">
+            <p class="bold grey3 small">Find Swarm City on</p>
+            <div class="minispace"></div>
+            <a href="https://swarm-slack-invite.herokuapp.com/" target="_blank">Slack</a>
+            <a href="https://medium.com/swarm-city-times" target="_blank">Medium</a>
+            <a href="https://github.com/swarmcity" target="_blank">Github</a>
+            <a href="https://twitter.com/SwarmCityHive" target="_blank">Twitter</a>
+            <a href="https://www.youtube.com/channel/UCsHBWn_ytZ3xdMbTyYe5Ifg" target="_blank">Youtube</a>
+            <a href="https://www.facebook.com/groups/SwarmCity/" target="_blank">Facebook</a>
+
+          </div>
+
+        </div>
+
+
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'faq-app',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'faq-app',
+        },
+      },
+
+    });
+  </script>
+</dom-module>
